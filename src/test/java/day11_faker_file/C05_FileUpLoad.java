@@ -42,6 +42,4 @@ public class C05_FileUpLoad extends TestBase {
         Assert.assertTrue(yaziElementi.isDisplayed());
         Thread.sleep(5000);
     }
-
-
 }

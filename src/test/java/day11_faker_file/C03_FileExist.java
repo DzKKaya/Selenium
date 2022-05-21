@@ -13,7 +13,7 @@ public class C03_FileExist {
         //C:\Users\LG\IdeaProjects\com.Batch59Selenium
 
         System.out.println(System.getProperty("user.home"));
-        //C:\Users\LG\Downloads
+        //C:\Users\LG
 
         String dosyaYolu=System.getProperty("user.home")+"\\Desktop\\text.txt";
 
