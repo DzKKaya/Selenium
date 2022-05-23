@@ -31,5 +31,4 @@ public class C02_KeyboardActions extends TestBase {
             Assert.assertTrue(youTubeLinki.isDisplayed());
 
       }
-
 }
