@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
-public class C03_WebTables extends TestBase {
+public class C03_WebTables extends C02_WebTables {
     @Test
     public void dinamikYazici() {
         // onceki class'daki adrese gidip
