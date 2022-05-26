@@ -23,6 +23,5 @@ public class C02_Actions extends TestBase {
         driver.findElement(By.xpath("//*[text()='Create a List']")).click();
         Thread.sleep(5000);
 
-
     }
 }
