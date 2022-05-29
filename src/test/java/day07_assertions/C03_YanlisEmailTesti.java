@@ -34,7 +34,7 @@ public class C03_YanlisEmailTesti {
         driver.findElement(By.xpath("//a[@class='login']")).click();
         WebElement email=driver.findElement(By.xpath("//input[@name='email_create']"));
         email.sendKeys("kayalik007.gmail.com", Keys.ENTER);
-        WebElement invalid=driver.findElement(By.xpath("//*[(text()='Invalid email address.']"));
+        WebElement invalid=driver.findElement(By.xpath("//*[text()='Invalid email address.']"));
         Assert.assertTrue(invalid.isDisplayed());
     }
 

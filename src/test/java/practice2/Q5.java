@@ -7,19 +7,34 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
 public class Q5 {
     static  WebDriver driver;
+
+    @Test
+    public void test01() {
+        driver.get("http://www.google.com");
+        Assert.assertTrue("Google içermiyor", driver.getTitle().contains("Google"));
+        String handleGoogle=driver.getWindowHandle();
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.get("https://www.amazon.com");
+        Assert.assertTrue(driver.getCurrentUrl().contains("www.amazon.com"));
+        driver.switchTo().window(handleGoogle);
+    }
+
     @BeforeClass
     public static void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("http://www.bestbuy.com");
+
+
+
     }
     @AfterClass
     public static void tearDown() throws InterruptedException {

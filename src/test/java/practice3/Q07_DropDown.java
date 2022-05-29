@@ -16,10 +16,13 @@ public class Q07_DropDown extends TestBase {
 
         //-->Task1 Find Dropdown on Multi Selection
         WebElement mSelection=driver.findElement(By.xpath("//*[@id='justAnInputBox']"));
-        Select select = new Select(mSelection);
+        Select select=new Select(mSelection);
+        List<WebElement>options=select.getOptions();
+        options.stream().forEach(t->System.out.println(t.getText()));
         mSelection.click();
-        System.out.println(mSelection.getText());
         //-->Task2 Find  all Dropdown Elements on page
+
+        
         List<WebElement> allDDE=driver.findElements(By.xpath("//*[@class='comboTreeItemTitle']"));
         allDDE.stream().map(t->t.getText()).forEach(System.out::println);
 

@@ -21,16 +21,16 @@ public class C03_RadioButton {
     }
     @After
     public void tearDown(){
-        driver.close();
+        //driver.close();
     }
     @Test
     public void test01() throws InterruptedException {
         //https://www.facebook.com adresine gidin
         driver.get("https://www.facebook.com");
         //Cookies’i kabul edin
-        driver.findElement(By.xpath("//*[text()='Allow essential and optional cookies']")).click();
+        //driver.findElement(By.xpath("//*[text()='Allow essential and optional cookies']")).click();
         //“Create an Account” button’una basin
-        driver.findElement(By.xpath("//*[text()='Create new account']")).click();
+        driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']")).click();
         //“radio buttons” elementlerini locate edin
         WebElement femaleButton=driver.findElement(By.xpath("//input[@value='1']"));
         WebElement maleButton=driver.findElement(By.xpath("//input[@value='2']"));
