@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 import java.util.List;
 
-public class Q06_DropDown {
+public class Q060_DropDown {
     /*
       ...Exercise6...
    // 1. Amazon.com'a gidelim.
