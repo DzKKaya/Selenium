@@ -33,8 +33,9 @@ public class C05_DropDownOptions {
     }
     @After
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
+
     @Test
     public void test01(){
         driver.get("https://www.amazon.com");
